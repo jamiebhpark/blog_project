@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Search Results</title>
-</head>
-<body>
-    <h1>Search Results</h1>
-    <form method="get">
-        {{ form.as_p }}
-        <button type="submit">Search</button>
-    </form>
-    <hr>
-    <ul>
-        {% for post in results %}
-            <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+<!-- blog/templates/blog/post_search.html -->
+{% extends "blog/base.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<h1>Search Results</h1>
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+</form>
+<hr>
+<ul>
+    {% for post in results %}
+        <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

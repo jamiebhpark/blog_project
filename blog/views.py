@@ -1,4 +1,5 @@
 # views.py
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Comment, Profile, Like, Bookmark
 from .forms import CommentForm
@@ -32,7 +33,8 @@ def post_detail(request, pk):
 def profile_detail(request, username):
     user = get_object_or_404(User, username=username)
     profile = get_object_or_404(Profile, user=user)
-    return render(request, 'blog/profile_detail.html', {'profile': profile})
+    posts = user.post_set.all()
+    return render(request, 'blog/profile_detail.html', {'profile': profile, 'posts': posts})
 
 
 def post_search(request):

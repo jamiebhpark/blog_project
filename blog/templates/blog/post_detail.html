@@ -1,65 +1,64 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ post.title }}</title>
-</head>
-<body>
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
-    <p>Author: {{ post.author }}</p>
-    <p>Created at: {{ post.created_at }}</p>
-    <p>Updated at: {{ post.updated_at }}</p>
+<!-- blog/templates/blog/post_detail.html -->
+{% extends "blog/base.html" %}
 
-    <hr>
+{% block title %}{{ post.title }}{% endblock %}
 
-    <!-- 좋아요 및 북마크 버튼 추가 -->
-    <div>
-        <a href="{% url 'post_like' post.pk %}">
-            {% if user.is_authenticated %}
-                {% if user in post.likes.all %}
-                    Unlike
-                {% else %}
-                    Like
-                {% endif %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+<p>Author: {{ post.author }}</p>
+<p>Created at: {{ post.created_at }}</p>
+<p>Updated at: {{ post.updated_at }}</p>
+
+<hr>
+
+<!-- 좋아요 및 북마크 버튼 추가 -->
+<div>
+    <a href="{% url 'post_like' post.pk %}">
+        {% if user.is_authenticated %}
+            {% if user in post.likes.all %}
+                Unlike
             {% else %}
                 Like
             {% endif %}
-        </a>
-        <a href="{% url 'post_bookmark' post.pk %}">
-            {% if user.is_authenticated %}
-                {% if user in post.bookmarks.all %}
-                    Remove Bookmark
-                {% else %}
-                    Bookmark
-                {% endif %}
+        {% else %}
+            Like
+        {% endif %}
+    </a>
+    <a href="{% url 'post_bookmark' post.pk %}">
+        {% if user.is_authenticated %}
+            {% if user in post.bookmarks.all %}
+                Remove Bookmark
             {% else %}
                 Bookmark
             {% endif %}
-        </a>
-    </div>
+        {% else %}
+            Bookmark
+        {% endif %}
+    </a>
+</div>
 
-    <hr>
+<hr>
 
-    <a href="{% url 'post_list' %}">Back to list</a>
-    <a href="{% url 'post_edit' post.pk %}">수정</a>
-    <a href="{% url 'post_delete' post.pk %}">삭제</a>
+<a href="{% url 'post_list' %}">Back to list</a>
+<a href="{% url 'post_edit' post.pk %}">수정</a>
+<a href="{% url 'post_delete' post.pk %}">삭제</a>
 
-    <hr>
+<hr>
 
-    <h2>Comments</h2>
-    <ul>
-        {% for comment in comments %}
-            <li>{{ comment.author }}: {{ comment.text }} ({{ comment.created_at }})</li>
-        {% endfor %}
-    </ul>
+<h2>Comments</h2>
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment.author }}: {{ comment.text }} ({{ comment.created_at }})</li>
+    {% endfor %}
+</ul>
 
-    <hr>
+<hr>
 
-    <h2>Add a Comment</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add Comment</button>
-    </form>
-</body>
-</html>
+<h2>Add a Comment</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Comment</button>
+</form>
+{% endblock %}

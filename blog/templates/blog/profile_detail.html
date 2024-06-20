@@ -1,28 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ user.username }}'s Profile</title>
-</head>
-<body>
-    <h1>{{ user.username }}'s Profile</h1>
-    <p>Email: {{ user.email }}</p>
-    <p>Joined: {{ user.date_joined }}</p>
-    <p>Profile Picture:</p>
-    {% if user.profile.profile_pic %}
-        <img src="{{ user.profile.profile_pic.url }}" alt="{{ user.username }}'s profile picture">
-    {% else %}
-        <p>No profile picture.</p>
-    {% endif %}
+<!-- blog/templates/blog/profile_detail.html -->
+{% extends "blog/base.html" %}
 
-    <hr>
+{% block title %}{{ profile.user.username }}'s Profile{% endblock %}
 
-    <h2>Posts by {{ user.username }}</h2>
-    <ul>
-        {% for post in posts %}
-            <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
+{% block content %}
+<h1>{{ profile.user.username }}'s Profile</h1>
+<p>Bio: {{ profile.bio }}</p>
+<img src="{{ profile.profile_pic.url }}" alt="{{ profile.user.username }}'s profile picture">
 
-    <a href="{% url 'post_list' %}">Back to list</a>
-</body>
-</html>
+<hr>
+
+<h2>Posts by {{ profile.user.username }}</h2>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        <p>{{ post.content|truncatewords:30 }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

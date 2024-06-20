@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0e1ff28-c88f-47ed-8f9c-6d9e25776979" name="Changes" comment="add functions_2" />
+    <list default="true" id="d0e1ff28-c88f-47ed-8f9c-6d9e25776979" name="Changes" comment="add functions&#10;-post/new&#10;-post/edit&#10;-post/delete">
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/profile_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/profile_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +87,7 @@
       <workItem from="1718859214270" duration="5316000" />
       <workItem from="1718871110713" duration="563000" />
       <workItem from="1718872954848" duration="302000" />
+      <workItem from="1718873366451" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="add functions">
       <option name="closed" value="true" />
@@ -100,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718873248570</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add functions&#10;-post/new&#10;-post/edit&#10;-post/delete">
+      <option name="closed" value="true" />
+      <created>1718873406077</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718873406077</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +123,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add functions" />
     <MESSAGE value="add functions_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add functions_2" />
+    <MESSAGE value="add functions&#10;-post/new&#10;-post/edit&#10;-post/delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="add functions&#10;-post/new&#10;-post/edit&#10;-post/delete" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog_project$urls.coverage" NAME="urls Coverage Results" MODIFIED="1718869519121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blog" />
