@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ user.username }}'s Profile</title>
+</head>
+<body>
+    <h1>{{ user.username }}'s Profile</h1>
+    <p>Email: {{ user.email }}</p>
+    <p>Joined: {{ user.date_joined }}</p>
+    <p>Profile Picture:</p>
+    {% if user.profile.profile_pic %}
+        <img src="{{ user.profile.profile_pic.url }}" alt="{{ user.username }}'s profile picture">
+    {% else %}
+        <p>No profile picture.</p>
+    {% endif %}
+
+    <hr>
+
+    <h2>Posts by {{ user.username }}</h2>
+    <ul>
+        {% for post in posts %}
+            <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'post_list' %}">Back to list</a>
+</body>
+</html>

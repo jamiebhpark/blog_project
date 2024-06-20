@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    <ul>
+        {% for post in results %}
+            <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
