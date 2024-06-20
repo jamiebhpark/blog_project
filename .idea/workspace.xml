@@ -4,31 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0e1ff28-c88f-47ed-8f9c-6d9e25776979" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0002_comment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0003_profile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0004_bookmark_like.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/signals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/post_search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/profile_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d0e1ff28-c88f-47ed-8f9c-6d9e25776979" name="Changes" comment="add functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/api_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +83,17 @@
       <workItem from="1718607060626" duration="5182000" />
       <workItem from="1718781117074" duration="2371000" />
       <workItem from="1718859214270" duration="5316000" />
+      <workItem from="1718871110713" duration="563000" />
     </task>
+    <task id="LOCAL-00001" summary="add functions">
+      <option name="closed" value="true" />
+      <created>1718871315305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718871315305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +101,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add functions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog_project$urls.coverage" NAME="urls Coverage Results" MODIFIED="1718869519121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/blog" />

@@ -1,6 +1,7 @@
 # blog/urls.py
 from django.urls import path, include
 from . import views, api_views
+from .views import PostCreateView, PostUpdateView, PostDeleteView
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),
@@ -15,4 +16,7 @@ urlpatterns = [
     path('api/posts/', api_views.PostList.as_view(), name='post_list_api'),
     path('api/posts/<int:pk>/', api_views.PostDetail.as_view(), name='post_detail_api'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('post/new/', PostCreateView.as_view(), name='post_create'),
+    path('post/<int:pk>/edit/', PostUpdateView.as_view(), name='post_edit'),
+    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post_delete'),
 ]

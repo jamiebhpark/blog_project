@@ -2,6 +2,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Comment, Profile, Like, Bookmark
 from .forms import CommentForm
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 def post_list(request):
@@ -61,3 +63,27 @@ def post_bookmark(request, pk):
     if not created:
         bookmark.delete()
     return redirect('post_detail', pk=pk)
+
+
+class PostCreateView(CreateView):
+    model = Post
+    fields = ['title', 'content']
+    template_name = 'blog/post_form.html'
+    success_url = reverse_lazy('post_list')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
+class PostUpdateView(UpdateView):
+    model = Post
+    fields = ['title', 'content']
+    template_name = 'blog/post_form.html'
+    success_url = reverse_lazy('post_list')
+
+
+class PostDeleteView(DeleteView):
+    model = Post
+    template_name = 'blog/post_confirm_delete.html'
+    success_url = reverse_lazy('post_list')
